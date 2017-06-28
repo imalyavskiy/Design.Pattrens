@@ -15,8 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Factory.Method.Main.cpp">
+    <ClCompile Include="2.Builder.Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="2.Builder.Main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="2.stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

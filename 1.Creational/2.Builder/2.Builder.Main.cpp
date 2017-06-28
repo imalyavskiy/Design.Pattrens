@@ -1,6 +1,6 @@
-#include "stdafx.h"
+#include "2.stdafx.h"
 
-#include "Builder.Main.h"
+#include "2.Builder.Main.h"
 // Реализация на C++.
 
 // Product
