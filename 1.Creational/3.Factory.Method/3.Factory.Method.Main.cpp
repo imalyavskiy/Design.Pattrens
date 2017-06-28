@@ -3,43 +3,51 @@
 
 struct Weapon {
 	virtual void attack() = 0;
-	
-	virtual ~Weapon() 
+
+	virtual ~Weapon()
 	{}
 };
 
 struct Sword : Weapon {
-	virtual void attack() override 
-	{ std::puts("Slash!"); }
+	virtual void attack() override
+	{
+		std::puts("Slash!");
+	}
 };
 
 struct Bow : Weapon {
-	virtual void attack() override 
-	{ std::puts("Pew!"); }
+	virtual void attack() override
+	{
+		std::puts("Pew!");
+	}
 };
 
 struct Hero {
 	virtual std::shared_ptr<Weapon> getWeapon() = 0; // Factory method
-	virtual ~Hero() 
+	virtual ~Hero()
 	{}
 };
 
 struct Knight : Hero {
 	virtual std::shared_ptr<Weapon> getWeapon() override
-	{ return std::shared_ptr<Weapon>(new Sword()); }
+	{
+		return std::shared_ptr<Weapon>(new Sword());
+	}
 };
 
 struct Rogue : Hero {
 	virtual std::shared_ptr<Weapon> getWeapon() override
-	{ return std::shared_ptr<Weapon>(new Bow()); }
+	{
+		return std::shared_ptr<Weapon>(new Bow());
+	}
 };
 
 int main() {
 	auto elf(std::make_shared<Rogue>());
 	auto human(std::make_shared<Knight>());
-	
+
 	std::shared_ptr<Weapon> wpn;
-	
+
 	wpn = elf->getWeapon();
 	wpn->attack();
 
