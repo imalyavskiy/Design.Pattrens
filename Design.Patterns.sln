@@ -5,11 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Creational", "1.Creational", "{80106499-354E-4DD1-8F03-EC9A0C2D6977}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Builder", "1.Creational\Builder\Builder.vcxproj", "{A7415CB2-B86E-4239-867A-94B7A288003F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.Builder", "1.Creational\2.Builder\2.Builder.vcxproj", "{A7415CB2-B86E-4239-867A-94B7A288003F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Factory.Method", "1.Creational\Factory.Method\Factory.Method.vcxproj", "{7D125A5E-6F4B-4F35-8D73-48503C20C8C4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.Factory.Method", "1.Creational\3.Factory.Method\3.Factory.Method.vcxproj", "{7D125A5E-6F4B-4F35-8D73-48503C20C8C4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Abstract.Factory", "1.Creational\Abstract.Factory\Abstract.Factory.vcxproj", "{D236B6AE-4BD2-4F31-A5F3-7FA0BBBCCE6D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.Abstract.Factory", "1.Creational\1.Abstract.Factory\1.Abstract.Factory.vcxproj", "{D236B6AE-4BD2-4F31-A5F3-7FA0BBBCCE6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
