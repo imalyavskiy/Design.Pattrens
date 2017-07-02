@@ -5,31 +5,31 @@ VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Creational", "1.Creational", "{80106499-354E-4DD1-8F03-EC9A0C2D6977}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.Builder", "1.Creational\2.Builder\2.Builder.vcxproj", "{A7415CB2-B86E-4239-867A-94B7A288003F}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.Factory.Method", "1.Creational\3.Factory.Method\3.Factory.Method.vcxproj", "{7D125A5E-6F4B-4F35-8D73-48503C20C8C4}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.Abstract.Factory", "1.Creational\1.Abstract.Factory\1.Abstract.Factory.vcxproj", "{D236B6AE-4BD2-4F31-A5F3-7FA0BBBCCE6D}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.Prototype", "1.Creational\4.Prototype\4.Prototype.vcxproj", "{3F3BE8BD-FD66-4670-8F92-05EE97123E8C}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.Singleton", "1.Creational\5.Singleton\5.Singleton.vcxproj", "{F1A4926F-0B2B-4541-9D12-3E12356DF01D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Structural", "2.Structural", "{343377FB-51B8-428B-BCB7-2B0D0C3EE65F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.Adapter", "2.Structural\1.Adapter\1.Adapter.vcxproj", "{E2E21E38-2BB5-47D4-AC0E-5EED9E4A26D7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.1.Abstract.Factory", "1.Creational\1.1.Abstract.Factory\Abstract.Factory.vcxproj", "{D236B6AE-4BD2-4F31-A5F3-7FA0BBBCCE6D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.Bridge", "2.Structural\2.Bridge\2.Bridge.vcxproj", "{8917CC10-7210-443E-BAF0-573A292A8B93}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.2.Builder", "1.Creational\1.2.Builder\Builder.vcxproj", "{A7415CB2-B86E-4239-867A-94B7A288003F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.Composite", "2.Structural\3.Composite\3.Composite.vcxproj", "{4CA8A7CD-8599-4EC4-8581-A6131C2185B0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.3.Factory.Method", "1.Creational\1.3.Factory.Method\Factory.Method.vcxproj", "{7D125A5E-6F4B-4F35-8D73-48503C20C8C4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.Decorator", "2.Structural\4.Decorator\4.Decorator.vcxproj", "{0B089546-213A-4345-815C-7DC9DE7CBD5B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.4.Prototype", "1.Creational\1.4.Prototype\Prototype.vcxproj", "{3F3BE8BD-FD66-4670-8F92-05EE97123E8C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.Facade", "2.Structural\5.Facade\5.Facade.vcxproj", "{3D1D14B1-BC90-4332-B7E6-C87D47FEE395}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.5.Singleton", "1.Creational\1.5.Singleton\Singleton.vcxproj", "{F1A4926F-0B2B-4541-9D12-3E12356DF01D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.Flyweight", "2.Structural\6.Flyweight\6.Flyweight.vcxproj", "{9C51A203-6EC7-43DE-A28F-F249688A618F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.1.Adapter", "2.Structural\2.1.Adapter\Adapter.vcxproj", "{E2E21E38-2BB5-47D4-AC0E-5EED9E4A26D7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7.Proxy", "2.Structural\7.Proxy\7.Proxy.vcxproj", "{109D0597-65CA-4DDE-BD18-BE6E5632C2D4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.2.Bridge", "2.Structural\2.2.Bridge\Bridge.vcxproj", "{8917CC10-7210-443E-BAF0-573A292A8B93}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.3.Composite", "2.Structural\2.3.Composite\Composite.vcxproj", "{4CA8A7CD-8599-4EC4-8581-A6131C2185B0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.4.Decorator", "2.Structural\2.4.Decorator\Decorator.vcxproj", "{0B089546-213A-4345-815C-7DC9DE7CBD5B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.5.Facade", "2.Structural\2.5.Facade\Facade.vcxproj", "{3D1D14B1-BC90-4332-B7E6-C87D47FEE395}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.6.Flyweight", "2.Structural\2.6.Flyweight\Flyweight.vcxproj", "{9C51A203-6EC7-43DE-A28F-F249688A618F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.7.Proxy", "2.Structural\2.7.Proxy\Proxy.vcxproj", "{109D0597-65CA-4DDE-BD18-BE6E5632C2D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
