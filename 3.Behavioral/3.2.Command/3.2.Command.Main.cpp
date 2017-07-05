@@ -119,7 +119,6 @@ public:
 
 int main()
 {
-	char s = '1';
 	int line_no = 0;
 	std::string str;
 	Receiver receiver;
@@ -131,36 +130,33 @@ int main()
 		std::cout << "$$$DOCUMENT$$$" << std::endl;
 	};
 
-	while (s != 'e')
+	while (str != "e")
 	{
 		std::cout << "What to do: \n1.Add a line\n2.Undo last command" << std::endl;
-		std::cin >> s;
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		switch (s)
+		std::getline(std::cin, str);
+		if(str == "1")
 		{
-		case '1':
 			std::cout << "What line to insert: ";
 			std::getline(std::cin, str);
 			line_no = std::atoi(str.c_str());
 			--line_no;
-			
+
 			std::cout << "What to insert: ";
 			std::getline(std::cin, str);
-			
+
 			receiver.Insert(line_no, str);
-			
+
 			print_doc();
-			break;
-		
-		case '2':
+		}
+		else if(str == "2")
+		{
 			receiver.Undo();
-			
+
 			print_doc();
-			break;
-		
-		default:
-			std::cout << s << " - pressed. Please press 1 or 2" << std::endl;
-			break;
+		}
+		else		
+		{
+			std::cout << str << " - pressed. Please press 1 or 2" << std::endl;
 		}
 	}
 }
