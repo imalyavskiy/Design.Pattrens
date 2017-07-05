@@ -148,7 +148,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="3.3.Interpreter.Main.cpp" />
+    <ClCompile Include="Interpreter.Main.cpp" />
+    <ClCompile Include="variant_1.cpp" />
+    <ClCompile Include="variant_2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="variant_1.h" />
+    <ClInclude Include="variant_2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
