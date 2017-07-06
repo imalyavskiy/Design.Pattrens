@@ -47,6 +47,10 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "3.4.Iterator.python", "3.Be
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.4.Iterator", "3.Behavioral\3.4.Iterator\Iterator.vcxproj", "{D090F48F-FA95-433B-AF8C-E8001213CE22}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Auxiliary", "4.Auxiliary", "{A2885DF0-332E-42A7-8C60-1420C2A1D627}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Model.View.Controller", "4.Auxiliary\4.1.Model.View.Controller.python\Model.View.Controller.pyproj", "{7E93F73A-B7B2-47C4-A848-2473A072DCA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -241,6 +245,12 @@ Global
 		{D090F48F-FA95-433B-AF8C-E8001213CE22}.Release|x64.Build.0 = Release|x64
 		{D090F48F-FA95-433B-AF8C-E8001213CE22}.Release|x86.ActiveCfg = Release|Win32
 		{D090F48F-FA95-433B-AF8C-E8001213CE22}.Release|x86.Build.0 = Release|Win32
+		{7E93F73A-B7B2-47C4-A848-2473A072DCA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E93F73A-B7B2-47C4-A848-2473A072DCA3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7E93F73A-B7B2-47C4-A848-2473A072DCA3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E93F73A-B7B2-47C4-A848-2473A072DCA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E93F73A-B7B2-47C4-A848-2473A072DCA3}.Release|x64.ActiveCfg = Release|Any CPU
+		{7E93F73A-B7B2-47C4-A848-2473A072DCA3}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -265,5 +275,6 @@ Global
 		{EA84425B-A5D8-4E94-BE6C-580F6B61AEAA} = {154F334C-15C5-4884-99B7-1CAF456B0D90}
 		{6C03EFE6-64BB-4427-804E-3F08FE0D68D1} = {154F334C-15C5-4884-99B7-1CAF456B0D90}
 		{D090F48F-FA95-433B-AF8C-E8001213CE22} = {154F334C-15C5-4884-99B7-1CAF456B0D90}
+		{7E93F73A-B7B2-47C4-A848-2473A072DCA3} = {A2885DF0-332E-42A7-8C60-1420C2A1D627}
 	EndGlobalSection
 EndGlobal
