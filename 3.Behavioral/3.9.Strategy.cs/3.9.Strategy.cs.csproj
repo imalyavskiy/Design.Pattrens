@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\_bin\AnyCPU\Debug\3.7.Strategy.cs\</OutputPath>
+    <OutputPath>..\..\_bin\AnyCPU\Debug\3.9.Strategy.cs\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
