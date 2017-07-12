@@ -49,7 +49,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.4.Iterator", "3.Behaviora
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Auxiliary", "4.Auxiliary", "{A2885DF0-332E-42A7-8C60-1420C2A1D627}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Model.View.Controller", "4.Auxiliary\4.1.Model.View.Controller.python\Model.View.Controller.pyproj", "{7E93F73A-B7B2-47C4-A848-2473A072DCA3}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "4.1.Model.View.Controller.python", "4.Auxiliary\4.1.Model.View.Controller.python\4.1.Model.View.Controller.python.pyproj", "{7E93F73A-B7B2-47C4-A848-2473A072DCA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
