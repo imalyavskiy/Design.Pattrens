@@ -241,8 +241,7 @@ class MinesweeperView( Frame ):
                     lambda e, row = row, column = column: self.controller.onRightClick( row, column )
                 ) 
                 self.buttonsRow.append( btn )
-
-                self.buttonsTable.append( self.buttonsRow )
+            self.buttonsTable.append( self.buttonsRow )
 
     def showWinMessage( self ):
         showinfo( 'Поздравляем!', 'Вы победили!' )
