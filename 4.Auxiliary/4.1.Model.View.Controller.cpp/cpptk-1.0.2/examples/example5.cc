@@ -1,11 +1,11 @@
-#include "cpptk.h"
+#include "../cpptk.h"
 #include <string>
 #include <iostream>
 #include <cmath>
 #include <queue>
 
 using namespace Tk;
-using namespace std;
+//using namespace std;
 
 // parameters of the animation
 int initLen = 100;
@@ -19,7 +19,7 @@ double gd   = 0.02;
 double bd   = 0.03;
 
 // queue of lines
-queue<string> lines;
+std::queue<std::string> lines;
 
 // this function creates and draws a new line
 void newLine()
@@ -61,7 +61,7 @@ void newLine()
 
 // note: this is used so that there is
 // only one callback registration
-string afterCommand;
+std::string afterCommand;
 
 // this function makes each step of the animation
 void nextStep()
@@ -102,8 +102,8 @@ int main(int, char *argv[])
           
           runEventLoop();
      }
-     catch (exception const &e)
+     catch (std::exception const &e)
      {
-          cerr << "Error: " << e.what() << '\n';
+		 std::cerr << "Error: " << e.what() << '\n';
      }
 }

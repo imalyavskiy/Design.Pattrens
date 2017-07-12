@@ -33,19 +33,22 @@ public:
           int cc = Tcl_Init(interp_);
           if (cc != TCL_OK)
           {
-               throw TkError(interp_->result);
+               //throw TkError(interp_->result);
+			  throw TkError(interp_->resultDontUse);
           }
 
           cc = Tk_Init(interp_);
           if (cc != TCL_OK)
           {
-               throw TkError(interp_->result);
-          }
+			  //throw TkError(interp_->result);
+			  throw TkError(interp_->resultDontUse);
+		  }
           
           cc = Tcl_Eval(interp_, "namespace eval CppTk {}");
           if (cc != TCL_OK)
           {
-               throw TkError(interp_->result);
+               //throw TkError(interp_->result);
+			  throw TkError(interp_->resultDontUse);
           }
      }
      
@@ -83,13 +86,14 @@ void do_eval(string const &str)
      int cc = Tcl_Eval(getInterp(), str.c_str());
      if (cc != TCL_OK)
      {
-          throw TkError(getInterp()->result);
+          //throw TkError(getInterp()->result);
+		 throw TkError(getInterp()->resultDontUse);
      }
 #endif
 }
 
 // map for callbacks
-typedef map<int, shared_ptr<CallbackBase> > CallbacksMap;
+typedef map<int, boost::shared_ptr<CallbackBase> > CallbacksMap;
 CallbacksMap callbacks;
 
 // callback id
@@ -209,7 +213,7 @@ int callbackHandler(ClientData cd, Tcl_Interp *interp,
           // refresh Tcl variables
           linkCpptoTcl();
      }
-     catch (exception const &e)
+     catch (std::exception const &e)
      {
           Tcl_SetResult(interp, const_cast<char*>(e.what()), TCL_VOLATILE);
           return TCL_ERROR;
@@ -226,7 +230,7 @@ void callbackDeleter(ClientData cd)
      callbacks.erase(slot);
 }
 
-string Tk::details::addCallback(shared_ptr<CallbackBase> cb)
+string Tk::details::addCallback(boost::shared_ptr<CallbackBase> cb)
 {
      int newSlot = callbackId++;
      callbacks[newSlot] = cb;
@@ -252,7 +256,8 @@ string Tk::details::addLinkVar(int &i)
           reinterpret_cast<char*>(&i), TCL_LINK_INT);
      if (cc != TCL_OK)
      {
-          throw TkError(getInterp()->result);
+		//throw TkError(getInterp()->result);
+		throw TkError(getInterp()->resultDontUse);
      }
      
      intLinks[&i] = newLinkVar;
@@ -269,7 +274,8 @@ string Tk::details::addLinkVar(double &d)
           reinterpret_cast<char*>(&d), TCL_LINK_DOUBLE);
      if (cc != TCL_OK)
      {
-          throw TkError(getInterp()->result);
+          //throw TkError(getInterp()->result);
+		 throw TkError(getInterp()->resultDontUse);
      }
      
      doubleLinks[&d] = newLinkVar;
@@ -294,7 +300,8 @@ string Tk::details::addLinkVar(string &s)
           reinterpret_cast<char*>(&it.first->second), TCL_LINK_STRING);
      if (cc != TCL_OK)
      {
-          throw TkError(getInterp()->result);
+		//throw TkError(getInterp()->result);
+		throw TkError(getInterp()->resultDontUse);
      }
      
      stringLinks[&s] = newLinkVar;
@@ -377,7 +384,8 @@ int details::getResultLen()
      cc = Tcl_ListObjLength(interp, list, &len);
      if (cc != TCL_OK)
      {
-          throw TkError(interp->result);
+		//throw TkError(interp->result);
+		 throw TkError(interp->resultDontUse);
      }
      
      return len;
@@ -394,14 +402,16 @@ int details::getResultElem<int>(int indx)
      int cc = Tcl_ListObjIndex(interp, list, indx, &obj);
      if (cc != TCL_OK)
      {
-          throw TkError(interp->result);
+		//throw TkError(interp->result);
+		throw TkError(interp->resultDontUse);
      }
      
      int val;
      cc = Tcl_GetIntFromObj(interp, obj, &val);
      if (cc != TCL_OK)
      {
-          throw TkError(interp->result);
+		//throw TkError(interp->result);
+		throw TkError(interp->resultDontUse);
      }
      
      return val;
@@ -418,14 +428,16 @@ double details::getResultElem<double>(int indx)
      int cc = Tcl_ListObjIndex(interp, list, indx, &obj);
      if (cc != TCL_OK)
      {
-          throw TkError(interp->result);
+        //throw TkError(interp->result);
+		throw TkError(interp->resultDontUse);
      }
      
      double val;
      cc = Tcl_GetDoubleFromObj(interp, obj, &val);
      if (cc != TCL_OK)
      {
-          throw TkError(interp->result);
+        //throw TkError(interp->result);
+		throw TkError(interp->resultDontUse);
      }
      
      return val;
@@ -442,7 +454,8 @@ string details::getResultElem<string>(int indx)
      int cc = Tcl_ListObjIndex(interp, list, indx, &obj);
      if (cc != TCL_OK)
      {
-          throw TkError(interp->result);
+		//throw TkError(interp->result);
+		throw TkError(interp->resultDontUse);
      }
      
      return Tcl_GetString(obj);
@@ -464,7 +477,8 @@ details::Command::~Command()
 string details::Command::invoke() const
 {
      invokeOnce();
-     return getInterp()->result;
+     //return getInterp()->result;
+	 return getInterp()->resultDontUse;
 }
 
 void details::Command::invokeOnce() const
@@ -525,7 +539,8 @@ details::Expr::operator int() const
      cc = Tcl_GetIntFromObj(interp, obj, &val);
      if (cc != TCL_OK)
      {
-          throw TkError(interp->result);
+		//throw TkError(interp->result);
+		 throw TkError(interp->resultDontUse);
      }
      
      return val;
@@ -542,7 +557,8 @@ details::Expr::operator double() const
      int cc = Tcl_GetDoubleFromObj(interp, obj, &val);
      if (cc != TCL_OK)
      {
-          throw TkError(interp->result);
+		//throw TkError(interp->result);
+		 throw TkError(interp->resultDontUse);
      }
      
      return val;
@@ -607,7 +623,8 @@ int details::Params::get<int>(int argno) const
      cc = Tcl_GetIntFromObj(getInterp(), objv[argno], &res);
      if (cc != TCL_OK)
      {
-          throw TkError(getInterp()->result);
+		//throw TkError(getInterp()->result);
+		throw TkError(getInterp()->resultDontUse);
      }
      
      return res;
@@ -664,7 +681,7 @@ string details::quote(string const &s)
 
 Expr Tk::operator-(Expr const &lhs, Expr const &rhs)
 {
-     shared_ptr<Command> cmd(lhs.getCmd());
+     boost::shared_ptr<Command> cmd(lhs.getCmd());
      cmd->append(rhs.getValue());
      
      return Expr(cmd);
@@ -672,7 +689,7 @@ Expr Tk::operator-(Expr const &lhs, Expr const &rhs)
 
 Expr Tk::operator<<(string const &w, Expr const &rhs)
 {
-     shared_ptr<Command> cmd(rhs.getCmd());
+     boost::shared_ptr<Command> cmd(rhs.getCmd());
      cmd->prepend(" ");
      cmd->prepend(w);
 
@@ -692,7 +709,8 @@ void Tk::deleteCallback(string const &name)
      int cc = Tcl_DeleteCommand(getInterp(), name.c_str());
      if (cc != TCL_OK)
      {
-          throw TkError(getInterp()->result);
+		//throw TkError(getInterp()->result);
+		 throw TkError(getInterp()->resultDontUse);
      }
 }
 

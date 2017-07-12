@@ -1,4 +1,4 @@
-#include "cpptk.h"
+#include "../cpptk.h"
 #include <stdio.h>
 
 using namespace Tk;

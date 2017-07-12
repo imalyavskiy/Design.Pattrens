@@ -1,8 +1,8 @@
-#include "cpptk.h"
+#include "../cpptk.h"
 #include <iostream>
 
 using namespace Tk;
-using namespace std;
+//using namespace std;
 
 int main(int, char *argv[])
 {
@@ -15,8 +15,8 @@ int main(int, char *argv[])
           
           runEventLoop();
      }
-     catch (exception const &e)
+     catch (std::exception const &e)
      {
-          cerr << "Error: " << e.what() << '\n';
+		 std::cerr << "Error: " << e.what() << '\n';
      }
 }

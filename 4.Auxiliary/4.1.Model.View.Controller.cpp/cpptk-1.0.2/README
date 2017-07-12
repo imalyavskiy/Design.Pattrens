@@ -34,3 +34,22 @@ The library was written under Unix, but works pretty well on MS Windows and
 may also work on Macs.
 
 Anyway - have fun! :-)
+---
+
+I.Malyavskiy
+
+In order to build the Cpp/Tk and samples under MS Visual studio it is required to make the followinf steps:
+	- install boost(only headers needed) 
+	- define the BOOST_DIR environment variable that points to the boost root directory of certain version
+	  e.g. BOOST_1_64 = "C:\boost\boost_1_64_0\"
+	       BOOST_1_64_LIB = "C:\boost\boost_1_64_0\stage\lib\" (not needed in this case but recommended)
+	- install Tcl/TK download the ActiveTcl packages for x86 and x64 CPU achitectures. 
+	- Install them both but to the different locations
+      e.g. "C:\Tcl\Tcl_8.6_x32" and "C:\Tcl\Tcl_8.6_x64"
+	- define appropriate environment variables TCL_DIR and TSL_LIB
+	  e.g. TCL_8_6_x32 = "C:\Tcl\Tcl_8.6_x32\include\"
+	       TCL_8_6_x32_LIB = "C:\Tcl\Tcl_8.6_x32\lib\"
+		   TCL_8_6_x64 = "C:\Tcl\Tcl_8.6_x64\include\"
+		   TCL_8_6_x64_LIB = "C:\Tcl\Tcl_8.6_x64\lib\"
+
+

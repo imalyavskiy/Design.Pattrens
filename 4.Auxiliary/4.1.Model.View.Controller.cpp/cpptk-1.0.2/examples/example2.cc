@@ -1,12 +1,12 @@
-#include "cpptk.h"
+#include "../cpptk.h"
 #include <iostream>
 
 using namespace Tk;
-using namespace std;
+//using namespace std;
 
 void sayHello()
 {
-     cout << "Hello C++/Tk!" << endl;
+	std::cout << "Hello C++/Tk!" << std::endl;
 }
 
 int main(int, char *argv[])
@@ -20,8 +20,8 @@ int main(int, char *argv[])
           
           runEventLoop();
      }
-     catch (exception const &e)
+     catch (std::exception const &e)
      {
-          cerr << "Error: " << e.what() << '\n';
+		 std::cerr << "Error: " << e.what() << '\n';
      }
 }

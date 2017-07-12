@@ -1,8 +1,8 @@
-#include "cpptk.h"
+#include "../cpptk.h"
 #include <iostream>
 
 using namespace Tk;
-using namespace std;
+//using namespace std;
 
 // parameters of the array
 int const arrayWidth = 30;
@@ -13,7 +13,7 @@ int squareSize = 10;
 bool cells[arrayWidth][arrayHeight];
 
 // array of canvas elements id
-string squares[arrayWidth][arrayHeight];
+std::string squares[arrayWidth][arrayHeight];
 
 void setCell(int i, int j, bool state)
 {
@@ -138,7 +138,7 @@ int main(int, char *argv[])
                     Point p1(i * squareSize, j * squareSize);
                     Point p2((i + 1) * squareSize, (j + 1) * squareSize);
                     
-                    string squareId(
+					std::string squareId(
                          ".c" << create(rectangle, p1, p2)
                          -outline("black") -Tk::fill("white")
                     );
@@ -149,14 +149,14 @@ int main(int, char *argv[])
           // bind the mouse click so that it is possible
           // to interact with the cells
           
-          bind(".c", "<Button-1>", click, event_x, event_y);
+		  std::bind(".c", "<Button-1>", click, event_x, event_y);
           
           wm(resizable, ".", false, false);
           
           runEventLoop();
      }
-     catch (exception const &e)
+     catch (std::exception const &e)
      {
-          cerr << "Error: " << e.what() << '\n';
+		 std::cerr << "Error: " << e.what() << '\n';
      }
 }
