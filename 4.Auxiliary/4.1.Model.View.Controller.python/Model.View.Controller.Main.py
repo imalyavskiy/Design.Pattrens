@@ -280,9 +280,12 @@ class MinesweeperController:
         self.model.nextCellMark( row, column )
         self.view.blockCell( row, column, self.model.getCell( row, column ).state == 'flagged' )
         self.view.syncWithModel()
+def Run():
+	model = MinesweeperModel()
+	controller = MinesweeperController( model )
+	view = MinesweeperView( model, controller )
+	view.pack()
+	view.mainloop()
 
-model = MinesweeperModel()
-controller = MinesweeperController( model )
-view = MinesweeperView( model, controller )
-view.pack()
-view.mainloop()
+if __name__ == "__main__":
+	Run()

@@ -12,6 +12,7 @@
     <OutputPath>.</OutputPath>
     <Name>4.1.Model.View.Controller.python</Name>
     <RootNamespace>4.1.Model.View.Controller</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,6 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Model.View.Controller.Main.py" />
+    <Compile Include="Run.pyw" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
