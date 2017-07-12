@@ -51,6 +51,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Auxiliary", "4.Auxiliary"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "4.1.Model.View.Controller.python", "4.Auxiliary\4.1.Model.View.Controller.python\4.1.Model.View.Controller.python.pyproj", "{7E93F73A-B7B2-47C4-A848-2473A072DCA3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.1.Model.View.Controller.cpp", "4.Auxiliary\4.1.Model.View.Controller.cpp\Model.View.Controller.cpp.vcxproj", "{5B40D564-EAF6-4A4C-9E75-A268A86220EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -251,6 +253,16 @@ Global
 		{7E93F73A-B7B2-47C4-A848-2473A072DCA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E93F73A-B7B2-47C4-A848-2473A072DCA3}.Release|x64.ActiveCfg = Release|Any CPU
 		{7E93F73A-B7B2-47C4-A848-2473A072DCA3}.Release|x86.ActiveCfg = Release|Any CPU
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF}.Debug|x64.ActiveCfg = Debug|x64
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF}.Debug|x64.Build.0 = Debug|x64
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF}.Debug|x86.ActiveCfg = Debug|Win32
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF}.Debug|x86.Build.0 = Debug|Win32
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF}.Release|Any CPU.ActiveCfg = Release|Win32
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF}.Release|x64.ActiveCfg = Release|x64
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF}.Release|x64.Build.0 = Release|x64
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF}.Release|x86.ActiveCfg = Release|Win32
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -276,5 +288,6 @@ Global
 		{6C03EFE6-64BB-4427-804E-3F08FE0D68D1} = {154F334C-15C5-4884-99B7-1CAF456B0D90}
 		{D090F48F-FA95-433B-AF8C-E8001213CE22} = {154F334C-15C5-4884-99B7-1CAF456B0D90}
 		{7E93F73A-B7B2-47C4-A848-2473A072DCA3} = {A2885DF0-332E-42A7-8C60-1420C2A1D627}
+		{5B40D564-EAF6-4A4C-9E75-A268A86220EF} = {A2885DF0-332E-42A7-8C60-1420C2A1D627}
 	EndGlobalSection
 EndGlobal
