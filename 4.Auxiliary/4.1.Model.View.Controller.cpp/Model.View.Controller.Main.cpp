@@ -1,18 +1,12 @@
-#include <cpptk.h>
-#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <memory>
+#include <list>
+#include <random>
 
-using namespace Tk;
+#include "Model.View.Controller.Model.h"
 
-void hello() {
-	puts("Hello C++/Tk!");
-}
-
-int main(int, char *argv[])
+int main(int argc, char* argv[])
 {
-	init(argv[0]);
-
-	button(".b") - text("Say Hello") - command(hello);
-	pack(".b") - padx(20) - pady(6);
-
-	runEventLoop();
+	std::cout << "Hello I am Minesweeper!" << std::endl;
 }

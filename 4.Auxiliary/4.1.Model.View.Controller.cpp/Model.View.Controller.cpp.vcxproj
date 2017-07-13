@@ -161,6 +161,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Model.View.Controller.Main.cpp" />
+    <ClCompile Include="Model.View.Controller.Model.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Model.View.Controller.Model.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
